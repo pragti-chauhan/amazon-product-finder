@@ -9,7 +9,7 @@ and HTML content) in the local device storage. Additionally, user will be able t
 
 ## Setting Up Project:-
 -	First, make sure you have the latest node version installed on your system and a code editor(like VSCode, Atom etc.)
--	Then, clone this repository in your local system, or clone it using the CLI. There are multiple ways to clone the repo as shown in the image below.
+-	Then, clone this repository in your local system, or clone it using the CLI. There are multiple ways to clone the repo as shown in the image below. <br>
   ![extra](https://github.com/pragti-chauhan/amazon-product-finder/assets/66918663/546f1818-b960-4a26-a79d-f34412a4c0a8) 
 -	Next, open the terminal and move to the root directory of the project folder using- <br>
  `cd <project_directory_path>` <br>
@@ -34,7 +34,7 @@ Here, I have searched ‘office chair’, and as you can see, our scraping with 
 
 -	Simultaneously, a screenshot of the product along with the HTML content of the product’s page will be saved in the local device storage as shown in the images below. <br>
 ![img4](https://github.com/pragti-chauhan/amazon-product-finder/assets/66918663/c4bed2d6-fda1-41a8-9725-4fb38a795bc7)
-![img5](https://github.com/pragti-chauhan/amazon-product-finder/assets/66918663/df46600b-ac3d-44b7-9523-8880d156ccb0)
+![img5](https://github.com/pragti-chauhan/amazon-product-finder/assets/66918663/df46600b-ac3d-44b7-9523-8880d156ccb0) 
 ![img6](https://github.com/pragti-chauhan/amazon-product-finder/assets/66918663/18bb392c-a10b-40cf-b4e9-303e188a3cb6)
 
 ## Tech Stack 
