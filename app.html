@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Finder</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="heading">
+        <h1 id="page-title">Amazon Product Finder</h1>
+        <img id="amazon-icon" src="/amazon-logo.png" alt="icon" height="60" />
+    </div>
+    <div class="search-bar">
+        <form class="product-form" id="pForm">    
+            <input class="product-name" name="pName" id="pName" type="text" placeholder="Look up any amazon product..."/>
+            <button class="submit-button" type="submit">Search</button>
+        </form>
+    </div>
+    <div id="result">
+    </div>
+    <script type="application/javascript" src="app.js"></script>
+    <script>
+        const form = document.getElementById("pForm");
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const userInput = document.getElementById('pName').value;
+            resultDiv.innerHTML = `Searching for "${userInput}"...`;
+
+            const response = await fetch(`/scrape?pName=${encodeURIComponent(userInput)}`);
+            const data = await response.json();
+
+            resultDiv.innerHTML = `
+                <h2>Product Information</h2>
+                <p><strong>Title:</strong> ${data.title}</p>
+                <p><strong>Price:</strong> ${data.price}</p>
+                <p><strong>URL:</strong> <a href="${data.url}" target="_blank">${data.url}</a></p>
+            `;
+        });
+    </script>
+</body>
+</html>
